@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="780" viewBox="0 0 1100 780" role="img" aria-labelledby="title desc">
+  <title id="title">AIMarket ecosystem - money and trust spine</title>
+  <desc id="desc">Factory, Oracles and METIS feed the Hub; ARGUS consumes; ACEX finances; SKOPOS watches the fleet; MOMUS finds; Treasury pays on verify; LOGOS analyzes read-only federation data.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070d18"/>
+      <stop offset="100%" stop-color="#101c33"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7aa2ff"/>
+    </marker>
+    <marker id="arrowMuted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5a7aaa"/>
+    </marker>
+    <marker id="arrowWarm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff8a65"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="780" rx="18" fill="url(#bg)"/>
+  <text x="40" y="48" fill="#e8f1ff" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="700">Ecosystem overview - money and trust spine</text>
+  <text x="40" y="74" fill="#9bb0d0" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="14">Static diagram (GitHub Mermaid truncates labels). Click to open full size.</text>
+
+  <g stroke-linecap="round" fill="none">
+    <path d="M280 220 L480 340" stroke="#7aa2ff" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <path d="M550 220 L550 300" stroke="#7aa2ff" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <path d="M820 220 L620 340" stroke="#7aa2ff" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <path d="M950 420 L720 390" stroke="#5a7aaa" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrowMuted)"/>
+    <path d="M480 420 L280 520" stroke="#7aa2ff" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <path d="M320 500 C380 460, 420 450, 480 410" stroke="#9fd0ff" stroke-width="1.8" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+    <path d="M620 420 L820 520" stroke="#7aa2ff" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <path d="M200 140 L200 170" stroke="#5a7aaa" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrowMuted)"/>
+    <path d="M320 120 C420 160, 480 240, 520 300" stroke="#5a7aaa" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrowMuted)"/>
+    <path d="M880 146 C820 220, 730 285, 640 330" stroke="#55e6c1" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrowMuted)"/>
+    <path d="M280 640 L480 400" stroke="#ff8a65" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrowWarm)"/>
+    <path d="M420 650 L550 400" stroke="#ffc857" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" fill="#c5d6f0">
+    <rect x="330" y="258" width="58" height="18" rx="4" fill="#1a2740"/>
+    <text x="359" y="271" text-anchor="middle">publish</text>
+    <rect x="512" y="248" width="86" height="18" rx="4" fill="#1a2740"/>
+    <text x="555" y="261" text-anchor="middle">signed math</text>
+    <rect x="690" y="248" width="108" height="18" rx="4" fill="#1a2740"/>
+    <text x="744" y="261" text-anchor="middle">verify cognition</text>
+    <rect x="780" y="360" width="96" height="18" rx="4" fill="#1a2740"/>
+    <text x="828" y="373" text-anchor="middle">live 3D graph</text>
+    <rect x="300" y="450" width="86" height="18" rx="4" fill="#1a2740"/>
+    <text x="343" y="463" text-anchor="middle">invoke settle</text>
+    <rect x="360" y="478" width="128" height="18" rx="4" fill="#1a2740"/>
+    <text x="424" y="491" text-anchor="middle">discover pay consume</text>
+    <rect x="690" y="450" width="74" height="18" rx="4" fill="#1a2740"/>
+    <text x="727" y="463" text-anchor="middle">CapShares</text>
+    <rect x="120" y="148" width="78" height="18" rx="4" fill="#1a2740"/>
+    <text x="159" y="161" text-anchor="middle">fleet watch</text>
+    <rect x="728" y="202" width="112" height="18" rx="4" fill="#1a2740"/>
+    <text x="784" y="215" text-anchor="middle">read-only analytics</text>
+    <rect x="300" y="600" width="72" height="18" rx="4" fill="#1a2740"/>
+    <text x="336" y="613" text-anchor="middle">find · sign</text>
+    <rect x="430" y="600" width="88" height="18" rx="4" fill="#1a2740"/>
+    <text x="474" y="613" text-anchor="middle">pay on verify</text>
+  </g>
+
+  <g filter="url(#shadow)" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+    <rect x="130" y="90" width="180" height="56" rx="12" fill="#102838" stroke="#5ec8ff" stroke-width="2"/>
+    <text x="220" y="114" text-anchor="middle" fill="#e8f7ff" font-size="16" font-weight="700">SKOPOS</text>
+    <text x="220" y="132" text-anchor="middle" fill="#9bb8d0" font-size="12">fleet observability</text>
+
+    <rect x="790" y="90" width="200" height="56" rx="12" fill="#0d302c" stroke="#55e6c1" stroke-width="2"/>
+    <text x="890" y="114" text-anchor="middle" fill="#ecfffb" font-size="16" font-weight="700">LOGOS</text>
+    <text x="890" y="132" text-anchor="middle" fill="#9fd8cf" font-size="12">read-only federation analytics</text>
+
+    <rect x="100" y="180" width="200" height="64" rx="12" fill="#2a2010" stroke="#ff9f43" stroke-width="2"/>
+    <text x="200" y="206" text-anchor="middle" fill="#fff4e8" font-size="16" font-weight="700">Factory / aicom</text>
+    <text x="200" y="226" text-anchor="middle" fill="#d0b090" font-size="12">design - build - publish</text>
+
+    <rect x="450" y="180" width="200" height="64" rx="12" fill="#2a1848" stroke="#b388ff" stroke-width="2"/>
+    <text x="550" y="206" text-anchor="middle" fill="#f5f0ff" font-size="16" font-weight="700">Oracles x17</text>
+    <text x="550" y="226" text-anchor="middle" fill="#b8a0d8" font-size="12">signed verifiable math</text>
+
+    <rect x="800" y="180" width="200" height="64" rx="12" fill="#2a1848" stroke="#b388ff" stroke-width="2"/>
+    <text x="900" y="206" text-anchor="middle" fill="#f5f0ff" font-size="16" font-weight="700">METIS</text>
+    <text x="900" y="226" text-anchor="middle" fill="#b8a0d8" font-size="12">cognition verifier</text>
+
+    <rect x="400" y="320" width="300" height="80" rx="14" fill="#14365c" stroke="#5b9cff" stroke-width="2.5"/>
+    <text x="550" y="352" text-anchor="middle" fill="#f2f7ff" font-size="20" font-weight="700">Hub / aimarket-hub</text>
+    <text x="550" y="376" text-anchor="middle" fill="#9bb0d0" font-size="13">catalog - channels - invoke - settle</text>
+
+    <rect x="860" y="400" width="200" height="64" rx="12" fill="#102838" stroke="#5ec8ff" stroke-width="2"/>
+    <text x="960" y="426" text-anchor="middle" fill="#e8f7ff" font-size="16" font-weight="700">Alien Monitor</text>
+    <text x="960" y="446" text-anchor="middle" fill="#9bb8d0" font-size="12">live 3D ecosystem graph</text>
+
+    <rect x="100" y="520" width="220" height="64" rx="12" fill="#1a3a2a" stroke="#5dffb0" stroke-width="2"/>
+    <text x="210" y="546" text-anchor="middle" fill="#eafff4" font-size="16" font-weight="700">ARGUS</text>
+    <text x="210" y="566" text-anchor="middle" fill="#90c8a8" font-size="12">human touchpoint + WARDEN</text>
+
+    <rect x="780" y="520" width="220" height="64" rx="12" fill="#3a2a10" stroke="#ffc857" stroke-width="2"/>
+    <text x="890" y="546" text-anchor="middle" fill="#fff8e8" font-size="16" font-weight="700">ACEX</text>
+    <text x="890" y="566" text-anchor="middle" fill="#d0b878" font-size="12">CapShares - lending - AMM</text>
+
+    <rect x="100" y="630" width="200" height="64" rx="12" fill="#3a1820" stroke="#ff8a65" stroke-width="2"/>
+    <text x="200" y="656" text-anchor="middle" fill="#ffe8e0" font-size="16" font-weight="700">MOMUS</text>
+    <text x="200" y="676" text-anchor="middle" fill="#d0a090" font-size="12">red team · signed findings</text>
+
+    <rect x="340" y="630" width="200" height="64" rx="12" fill="#3a2a10" stroke="#ffc857" stroke-width="2"/>
+    <text x="440" y="656" text-anchor="middle" fill="#fff8e8" font-size="16" font-weight="700">Treasury</text>
+    <text x="440" y="676" text-anchor="middle" fill="#d0b878" font-size="12">separate bounty payer</text>
+  </g>
+
+  <text x="40" y="740" fill="#7a8aa8" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="12">Solid = money/trust flow - Dashed = observe/audit - Source of truth: aicom monorepo</text>
+  <text x="40" y="760" fill="#5a6a88" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="12">Interactive 3D: https://monitor.modelmarket.dev/</text>
+</svg>
