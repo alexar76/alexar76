@@ -43,7 +43,7 @@
 
 <p align="center">
   <a href="https://raw.githubusercontent.com/alexar76/alexar76/main/assets/ecosystem-overview.svg">
-    <img src="https://raw.githubusercontent.com/alexar76/alexar76/main/assets/ecosystem-overview.svg" alt="Ecosystem overview: Factory scaffolds onto HESTIA; HESTIA announces to Hub; Oracles and METIS feed Hub; ARGUS consumes; ACEX finances; SKOPOS observes; MOMUS finds; Treasury pays; LOGOS analyzes the federation; Attested Memory keeps verifiable agent memory; eSIM operators sell to agents over x402 and bring signed delivery receipts to the Hub; EMPORION sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub." width="900">
+    <img src="https://raw.githubusercontent.com/alexar76/alexar76/main/assets/ecosystem-overview.svg" alt="Ecosystem overview: Factory scaffolds onto HESTIA; HESTIA announces to Hub; Oracles and METIS feed Hub; ARGUS consumes; ACEX finances; SKOPOS observes; MOMUS finds; Treasury pays; LOGOS analyzes the federation; Attested Memory keeps verifiable agent memory; eSIM operators sell to agents over x402 and bring signed delivery receipts to the Hub; EMPORION sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox." width="900">
   </a>
 </p>
 
@@ -166,7 +166,7 @@ One pipeline, in the order trust and money actually move. Each stage names the r
 | 2 | **Host** | **HESTIA** is the hosted runtime — isolated, on the operator's machines; signed deploy onto this host. Empty roster ≠ empty market |
 | 3 | **Admit** | **THEMIS** decides at publish time — signed `approve` / `review` / `reject` (optional) |
 | 4 | **List & invoke** | **AIMarket** [protocol](https://github.com/alexar76/aimarket-protocol) + [hub](https://github.com/alexar76/aimarket-hub) carry the catalogue, channels and calls |
-| 5 | **Supply** | 17 **oracles** (randomness, delay, consensus, trust math) · **GAIA** attested physical readings · **METIS** cognition · **eSIM operators** sell travel eSIMs to agents over x402 ([kit](https://github.com/alexar76/esim-operator-kit)) · **EMPORION** public-record facts for trade: EU VAT, LEI, ECB rates, sanctions lists, timestamps ([repo](https://github.com/alexar76/emporion)) |
+| 5 | **Supply** | 17 **oracles** (randomness, delay, consensus, trust math) · **GAIA** attested physical readings · **METIS** cognition · **eSIM operators** sell travel eSIMs to agents over x402 ([kit](https://github.com/alexar76/esim-operator-kit)) · **EMPORION** public-record facts for trade: EU VAT, LEI, ECB rates, sanctions lists, timestamps, company registers, EORI, domains, business days, web capture, timers ([repo](https://github.com/alexar76/emporion)) · **domain operators** register a quoted `.com` / `.net` / `.org` for an agent over x402, on Openprovider or Porkbun Sandbox ([kit](https://github.com/alexar76/domain-operator-kit)) |
 | 6 | **Verify** | **METIS** cognition · **BASANOS** Solidity at a pin · **DOLOS** live EVM exploits · **MOMUS** HTTP/federation · **WARDEN** third-party MCP · **HISTOR** what third-party MCP servers advertised, over time · **Attested Memory** verifiable memory agents keep |
 | 7 | **Consume** | **ARGUS** — the demand-side client humans and agents actually run · it bought a travel eSIM for its owner and got the money back, on Base ([case](https://github.com/alexar76/argus/blob/main/docs/use-case-esim-purchase-refund.md)) |
 | 8 | **Settle** | escrow, channels, and **Treasury** bounties paid only after independent verify |
@@ -193,12 +193,14 @@ know only a name, jump to the [A–Z index](#az).
 | Oracles ×17 | Hub | signed verifiable math |
 | GAIA | Hub | attested physical-world readings |
 | eSIM operator kit | Hub | signed offers · a federation node or the operator's own hub · buyers' signed delivery receipts → `deliveries_30d` |
-| EMPORION | Hub | VIES VAT · GLEIF LEI · ECB reference rates · EU / OFAC / UN sanctions lookups · OpenTimestamps proofs — each answer signed with its source, fetch time and SHA-256; sold only through the hub |
+| EMPORION | Hub | VIES VAT · GLEIF LEI · ECB reference rates · EU / OFAC / UK sanctions lookups (UN designations included) · OpenTimestamps proofs · company registers (NO · FR · CZ · FI) · EORI · RDAP · business days · Bitcoin-anchored web capture · timers with a dead man's switch — each answer signed with its source, fetch time and SHA-256; sold only through the hub |
 | ATLAS | GAIA | planetary sensor map over those readings |
 | Cite desks | ATLAS / Hub | focused B2B evidence products that buy `atlas.*` / `gaia.*` |
 | METIS | Hub | verify cognition |
 | Hub ↔ ARGUS | — | invoke / settle · discover / pay / consume |
 | ARGUS / agents | eSIM operator | x402 order straight to the seller's wallet · refund of an unused eSIM |
+| Domain operator kit | Hub | public quotes · Openprovider or Porkbun Sandbox, or the operator's own HTTP supplier · the order and the x402 payment go to the seller |
+| Agents | Domain operator | x402 in USDC on Base to the operator's receiving wallet · fixed markup · the registrar account stays with the operator |
 | Hub | ACEX | CapShares |
 | SKOPOS | Factory / Hub | fleet watch |
 | MOMUS | Factory / Hub | find · sign |
@@ -280,11 +282,12 @@ know only a name, jump to the [A–Z index](#az).
 | [**cite-desks**](https://github.com/alexar76/cite-desks) | **Cite desks** — five independent evidence desks on AIMarket rails (Emberline fire, Tideline flood, Solrecord PV, Seamark Nordic AIS, Plinth site): watches, scheduled runs, cite packs, USDC checkout · [family](https://desk.modelmarket.dev/) · [Emberline](https://emberlinedesk.com/) · fork [alexar76/cite-desks](https://github.com/alexar76/cite-desks) |
 
 ### 📶 Real-world commerce — agents buy real things
-<sub>Stage 5 for the real economy: a seller an agent pays directly, with refunds and receipts the federation can count, and the public-record facts an agent checks before it deals with a company.</sub>
+<sub>Stage 5 for the real economy: a seller an agent pays directly, with refunds and receipts the federation can count, the public-record facts an agent checks before it deals with a company, and a domain an operator registers on the registrar account it already holds.</sub>
 
 | Repo | What it is |
 | --- | --- |
-| [**emporion**](https://github.com/alexar76/emporion) | **EMPORION** — public-record facts for agents that trade: EU VAT validity (VIES) with the consultation number, legal entities (GLEIF LEI), ECB reference rates, sanctions-list lookups (EU, OFAC SDN with wallet addresses, UN — a lookup, not a determination) and Bitcoin-anchored timestamp proofs (OpenTimestamps); every answer signed with its source, fetch time and SHA-256; $0.001–0.002 a call through the hub · [live](https://emporion.modelmarket.dev/) · [landing](https://alexar76.github.io/emporion/) |
+| [**domain-operator-kit**](https://github.com/alexar76/domain-operator-kit) | **Domain operator kit** — a seller node for operators who already register domains. An agent gets one quoted `.com`, `.net` or `.org` for one year, registered to the supplied registrant, plus owner-signed DNS. The agent pays the operator's receiving wallet by x402 in USDC on Base; the operator sets a fixed markup and keeps the registrar account and the payment destination. Built-in registrars: **Openprovider** and **Porkbun Sandbox**; any other supplier uses the HTTP contract. Porkbun refuses live mode until a production pilot passes. Sandbox pilots passed; production purchases, payment settlement and Vercel attachment are still unverified. No hosted demo. |
+| [**emporion**](https://github.com/alexar76/emporion) | **EMPORION** — public-record facts for agents that trade: EU VAT validity (VIES) with the consultation number, legal entities (GLEIF LEI), ECB reference rates, sanctions-list lookups (EU, OFAC SDN with wallet addresses, UK with the UN designations — a lookup, not a determination) and Bitcoin-anchored timestamp proofs (OpenTimestamps); every answer signed with its source, fetch time and SHA-256; since 0.2 also national company registers, EORI, domain registrations (RDAP), business days, web pages captured as evidence and timers with a dead man's switch; $0.001–0.003 a call through the hub · [live](https://emporion.modelmarket.dev/) · [landing](https://alexar76.github.io/emporion/) |
 | [**esim-operator-kit**](https://github.com/alexar76/esim-operator-kit) | **eSIM operator kit** — a travel-eSIM storefront for people and a seller node for AI agents (x402 in USDC, refunds of unused eSIMs, signed delivery receipts), on eSIM Access, Airalo, eSIM Go or the operator's own system; joins the federation as a node or as its own hub with one command, `./onboard.sh` · [demo](https://esim.modelmarket.dev) · [guides](https://esim.modelmarket.dev/kit) · [cases](https://esim.modelmarket.dev/kit/cases) |
 
 ### 🛡 Trust & security — who is allowed in, and who pays for finding out
@@ -396,7 +399,8 @@ it from any other angle.
 | [create-aimarket-agent](https://github.com/alexar76/create-aimarket-agent) | Build & connect | provider scaffold generator |
 | [dioscuri](https://github.com/alexar76/dioscuri) | Community & broadcast | twin community agents |
 | [dolos](https://github.com/alexar76/dolos) | Trust & security | dynamic EVM red team (fork-isolated) |
-| [emporion](https://github.com/alexar76/emporion) | Real-world commerce | VAT, LEI, FX, sanctions & timestamp lookups |
+| [domain-operator-kit](https://github.com/alexar76/domain-operator-kit) | Real-world commerce | domains on Openprovider or Porkbun Sandbox |
+| [emporion](https://github.com/alexar76/emporion) | Real-world commerce | VAT, LEI, registers, FX, sanctions, timestamps, web capture & timers |
 | [esim-operator-kit](https://github.com/alexar76/esim-operator-kit) | Real-world commerce | travel eSIMs for people and AI agents |
 | [gaia](https://github.com/alexar76/gaia) | Physical world | attested IoT readings |
 | [helios](https://github.com/alexar76/helios) | Community & broadcast | yaml → voiced video → YouTube |
