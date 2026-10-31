@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="860" viewBox="0 0 1100 860" role="img" aria-labelledby="title desc">
   <title id="title">AIMarket ecosystem - money and trust spine</title>
-  <desc id="desc">Factory scaffolds onto HESTIA (hearth); HESTIA announces to Hub; Oracles and METIS feed the Hub; ARGUS consumes; Attested Memory keeps verifiable agent memory; ACEX finances; SKOPOS watches the fleet; MOMUS finds; Treasury pays on verify; LOGOS analyzes read-only federation data; eSIM operators sell travel eSIMs to agents over x402 and bring buyers' signed delivery receipts to the Hub; EMPORION sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox and keep their own registrar account.</desc>
+  <desc id="desc">Factory scaffolds onto HESTIA (hearth); HESTIA announces to Hub; Oracles and METIS feed the Hub; ARGUS consumes; Attested Memory keeps verifiable agent memory; ACEX finances; SKOPOS watches the fleet; MOMUS finds; Treasury pays on verify; LOGOS analyzes read-only federation data; eSIM operators sell travel eSIMs to agents over x402 and bring buyers' signed delivery receipts to the Hub; SYMMARTYS sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox and keep their own registrar account.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#070d18"/>
@@ -139,7 +139,7 @@
     <text x="890" y="676" text-anchor="middle" fill="#8fd8bf" font-size="12">travel eSIMs · x402 · refunds</text>
 
     <rect x="30" y="330" width="220" height="64" rx="12" fill="#0d3328" stroke="#2ef2b0" stroke-width="2"/>
-    <text x="140" y="356" text-anchor="middle" fill="#eafff7" font-size="16" font-weight="700">EMPORION</text>
+    <text x="140" y="356" text-anchor="middle" fill="#eafff7" font-size="16" font-weight="700">SYMMARTYS</text>
     <text x="140" y="376" text-anchor="middle" fill="#8fd8bf" font-size="12">VAT · LEI · registers · OTS · timers</text>
 
     <rect x="430" y="708" width="250" height="64" rx="12" fill="#0d3328" stroke="#2ef2b0" stroke-width="2"/>

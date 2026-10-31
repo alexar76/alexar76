@@ -23,10 +23,13 @@
   <a href="https://edu.modelmarket.dev/"><b>🎓 School</b></a>
 </p>
 
-<p align="center"><sub>No install. One click. The rest of this page is the map.</sub></p>
+<p align="center"><sub>One click or one command. The rest of this page is the map.</sub></p>
 
 | | What you get | Open |
 | --- | --- | --- |
+| **WARDEN** | Check every MCP server on your machine before its tools reach your model — no account, no key | `npx -y @aimarket/warden scan` · [warden.modelmarket.dev](https://warden.modelmarket.dev/) |
+| **HISTOR open data** | What every remote MCP server in the official registry advertised, and every change, signed, monthly (CC BY 4.0) | [Hugging Face](https://huggingface.co/datasets/alexar76/histor-mcp-tool-definitions) · [Zenodo DOI](https://doi.org/10.5281/zenodo.23512759) |
+| **Free checks** | x402 endpoint, MCP diff, WARDEN scan, HISTOR check and tool-list token cost — in the browser | [modelmarket.dev/tools](https://modelmarket.dev/tools/?utm_source=github&utm_medium=profile&utm_campaign=alexar76) |
 | **Playground** | Send one allow-listed GAIA reading through Hub and Metis, then inspect the signed receipt | [play.modelmarket.dev](https://play.modelmarket.dev/) · [source](https://github.com/alexar76/aimarket-playground) |
 | **Alien Monitor** | The live 3D graph of the whole ecosystem — Hub, Factory, ARGUS, oracles, on-chain metrics | [monitor.modelmarket.dev](https://monitor.modelmarket.dev/) |
 | **School** | 13 clip lessons (Try-it + Colab) that on-ramp into the academies | [edu.modelmarket.dev](https://edu.modelmarket.dev/) |
@@ -42,8 +45,8 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/alexar76/alexar76/main/assets/ecosystem-overview.svg">
-    <img src="https://raw.githubusercontent.com/alexar76/alexar76/main/assets/ecosystem-overview.svg" alt="Ecosystem overview: Factory scaffolds onto HESTIA; HESTIA announces to Hub; Oracles and METIS feed Hub; ARGUS consumes; ACEX finances; SKOPOS observes; MOMUS finds; Treasury pays; LOGOS analyzes the federation; Attested Memory keeps verifiable agent memory; eSIM operators sell to agents over x402 and bring signed delivery receipts to the Hub; EMPORION sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox." width="900">
+  <a href="assets/ecosystem-overview.svg">
+    <img src="assets/ecosystem-overview.svg" alt="Ecosystem overview: Factory scaffolds onto HESTIA; HESTIA announces to Hub; Oracles and METIS feed Hub; ARGUS consumes; ACEX finances; SKOPOS observes; MOMUS finds; Treasury pays; LOGOS analyzes the federation; Attested Memory keeps verifiable agent memory; eSIM operators sell to agents over x402 and bring signed delivery receipts to the Hub; SYMMARTYS sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox." width="900">
   </a>
 </p>
 
@@ -70,6 +73,8 @@
 | **Want the factory in a browser** | [magic-ai-factory.com](https://magic-ai-factory.com) — guest try-out + [admin demo](https://magic-ai-factory.com/admin/login) (passwordless: `admin`, then **Enter admin demo**) |
 | **Want the architecture** | [Ecosystem knowledge base](https://github.com/alexar76/aicom/blob/main/docs/ecosystem/knowledge-base.md) · [whitepaper](https://github.com/alexar76/aicom/blob/main/docs/ecosystem/whitepaper/en.md) · [use cases](https://use.modelmarket.dev/) |
 | **Want to run the fleet** | `./start.sh --everything` below, or [VPS quick-start](https://github.com/alexar76/aicom/blob/main/docs/quickstart-ecosystem-deploy.md) |
+| **Want to secure your MCP setup** | `npx -y @aimarket/warden scan` vets every MCP server your clients start, before a model reads its tools — no account, no key · [WARDEN](https://github.com/alexar76/warden) · [scan guide](https://github.com/alexar76/warden/blob/main/docs/scan.md) |
+| **Want to know whether an MCP server changed** | [HISTOR](https://github.com/alexar76/histor) reads what 88k+ servers advertise every day and signs it into a public Merkle log · [/check](https://histor.modelmarket.dev/) · [open dataset, weekly](https://histor.modelmarket.dev/datasets/) |
 | **Want to publish a provider** | `uvx create-aimarket-agent my-agent --kind data-provider --metis` · [full security-agent tutorial](https://github.com/alexar76/create-aimarket-agent/blob/main/docs/tutorials/themis.en.md) · [finished agent](https://github.com/alexar76/themis) · host the process on **[HESTIA](https://github.com/alexar76/hestia)** (hosted runtime, not the Hub) |
 | **Want to contribute** | [Discussions](https://github.com/alexar76/aicom/discussions) · [good first issues](https://github.com/alexar76/aicom/labels/good%20first%20issue) · [𝕏 @build_ai_infra](https://x.com/build_ai_infra) |
 
@@ -84,25 +89,33 @@ Also live, no login: [Agent Arena](https://magic-ai-factory.com/arena/) · [Fact
 **MCP in Cursor / Claude** (web fetch + search + Metis verify):
 
 ```bash
-pip install aimarket-mcp
+uvx aimarket-mcp                # or: pip install aimarket-mcp  (Python 3.10+)
 ```
 
 ```json
-{ "mcpServers": { "aimarket-mcp": { "command": "aimarket-mcp" } } }
+{ "mcpServers": { "aimarket-mcp": { "command": "uvx", "args": ["aimarket-mcp"] } } }
 ```
 
 Oracles for agents (35 tools): [`aimarket-oracle-gateway`](https://github.com/alexar76/aimarket-oracle-gateway) · [Glama](https://glama.ai/mcp/servers/alexar76/aimarket-mcp)
 
-**Three lines → signed Hub result** (needs budget on [modelmarket.dev](https://modelmarket.dev)):
+**One call → signed Hub result, free** (the hub's trial tier: a stable visitor id of your choosing, no key, no wallet):
+
+```bash
+curl -s -X POST https://modelmarket.dev/ai-market/v2/invoke \
+  -H 'Content-Type: application/json' -H 'X-AIMarket-Sandbox-Visitor: my-first-try-01' \
+  -d '{"capability_id":"gaia.weather.read@v1","product_id":"gaia.gateway",
+       "source_hub":"https://iot.modelmarket.dev","input":{"device_id":"om-wx-01"}}'
+```
+
+The same from Python (`pip install aimarket-agent`, 2.6.1 or newer for `sandbox_visitor`; with `api_key=` from [modelmarket.dev/start](https://modelmarket.dev/start) it pays instead):
 
 ```python
 from aimarket_agent import AIMarketAgent
-r = AIMarketAgent(base_url="https://modelmarket.dev", budget=1.0).invoke_single(
-    "platon", "platon.random@v1", {"nbytes": 32})
-print(r.get("receipt") or r)  # signed oracle receipt
+r = AIMarketAgent(base_url="https://modelmarket.dev", sandbox_visitor="my-first-try-01").invoke_single(
+    "gaia.gateway", "gaia.weather.read@v1", {"device_id": "om-wx-01"},
+    source_hub="https://iot.modelmarket.dev")  # a federated capability: say which hub serves it
+print(r.get("receipt") or r)  # signed receipt, sandbox: true
 ```
-
-`pip install aimarket-agent` first.
 
 **LangGraph / CrewAI / AutoGen** (native tools from Hub capabilities):
 
@@ -166,7 +179,7 @@ One pipeline, in the order trust and money actually move. Each stage names the r
 | 2 | **Host** | **HESTIA** is the hosted runtime — isolated, on the operator's machines; signed deploy onto this host. Empty roster ≠ empty market |
 | 3 | **Admit** | **THEMIS** decides at publish time — signed `approve` / `review` / `reject` (optional) |
 | 4 | **List & invoke** | **AIMarket** [protocol](https://github.com/alexar76/aimarket-protocol) + [hub](https://github.com/alexar76/aimarket-hub) carry the catalogue, channels and calls |
-| 5 | **Supply** | 17 **oracles** (randomness, delay, consensus, trust math) · **GAIA** attested physical readings · **METIS** cognition · **eSIM operators** sell travel eSIMs to agents over x402 ([kit](https://github.com/alexar76/esim-operator-kit)) · **EMPORION** public-record facts for trade: EU VAT, LEI, ECB rates, sanctions lists, timestamps, company registers, EORI, domains, business days, web capture, timers ([repo](https://github.com/alexar76/emporion)) · **domain operators** register a quoted `.com` / `.net` / `.org` for an agent over x402, on Openprovider or Porkbun Sandbox ([kit](https://github.com/alexar76/domain-operator-kit)) |
+| 5 | **Supply** | 17 **oracles** (randomness, delay, consensus, trust math) · **GAIA** attested physical readings · **METIS** cognition · **eSIM operators** sell travel eSIMs to agents over x402 ([kit](https://github.com/alexar76/esim-operator-kit)) · **[SYMMARTYS](https://symmartys.modelmarket.dev/)** public-record facts for trade: EU VAT, LEI, ECB rates, sanctions lists, timestamps, company registers, EORI, domains, business days, web capture, timers (live 0.5.0; source and registry publication pending) · **domain operators** register a quoted `.com` / `.net` / `.org` for an agent over x402, on Openprovider or Porkbun Sandbox ([kit](https://github.com/alexar76/domain-operator-kit)) |
 | 6 | **Verify** | **METIS** cognition · **BASANOS** Solidity at a pin · **DOLOS** live EVM exploits · **MOMUS** HTTP/federation · **WARDEN** third-party MCP · **HISTOR** what third-party MCP servers advertised, over time · **Attested Memory** verifiable memory agents keep |
 | 7 | **Consume** | **ARGUS** — the demand-side client humans and agents actually run · it bought a travel eSIM for its owner and got the money back, on Base ([case](https://github.com/alexar76/argus/blob/main/docs/use-case-esim-purchase-refund.md)) |
 | 8 | **Settle** | escrow, channels, and **Treasury** bounties paid only after independent verify |
@@ -193,7 +206,7 @@ know only a name, jump to the [A–Z index](#az).
 | Oracles ×17 | Hub | signed verifiable math |
 | GAIA | Hub | attested physical-world readings |
 | eSIM operator kit | Hub | signed offers · a federation node or the operator's own hub · buyers' signed delivery receipts → `deliveries_30d` |
-| EMPORION | Hub | VIES VAT · GLEIF LEI · ECB reference rates · EU / OFAC / UK sanctions lookups (UN designations included) · OpenTimestamps proofs · company registers (NO · FR · CZ · FI) · EORI · RDAP · business days · Bitcoin-anchored web capture · timers with a dead man's switch — each answer signed with its source, fetch time and SHA-256; sold only through the hub |
+| [SYMMARTYS](https://symmartys.modelmarket.dev/) | Hub | VIES VAT · GLEIF LEI · ECB reference rates · EU / OFAC / UK sanctions lookups (UN designations included) · OpenTimestamps proofs · company registers (NO · FR · CZ · FI) · EORI · RDAP · business days · Bitcoin-anchored web capture · timers with a dead man's switch — each answer signed with its source, fetch time and SHA-256; sold only through the hub |
 | ATLAS | GAIA | planetary sensor map over those readings |
 | Cite desks | ATLAS / Hub | focused B2B evidence products that buy `atlas.*` / `gaia.*` |
 | METIS | Hub | verify cognition |
@@ -287,7 +300,7 @@ know only a name, jump to the [A–Z index](#az).
 | Repo | What it is |
 | --- | --- |
 | [**domain-operator-kit**](https://github.com/alexar76/domain-operator-kit) | **Domain operator kit** — a seller node for operators who already register domains. An agent gets one quoted `.com`, `.net` or `.org` for one year, registered to the supplied registrant, plus owner-signed DNS. The agent pays the operator's receiving wallet by x402 in USDC on Base; the operator sets a fixed markup and keeps the registrar account and the payment destination. Built-in registrars: **Openprovider** and **Porkbun Sandbox**; any other supplier uses the HTTP contract. Porkbun refuses live mode until a production pilot passes. Sandbox pilots passed; production purchases, payment settlement and Vercel attachment are still unverified. No hosted demo. |
-| [**emporion**](https://github.com/alexar76/emporion) | **EMPORION** — public-record facts for agents that trade: EU VAT validity (VIES) with the consultation number, legal entities (GLEIF LEI), ECB reference rates, sanctions-list lookups (EU, OFAC SDN with wallet addresses, UK with the UN designations — a lookup, not a determination) and Bitcoin-anchored timestamp proofs (OpenTimestamps); every answer signed with its source, fetch time and SHA-256; since 0.2 also national company registers, EORI, domain registrations (RDAP), business days, web pages captured as evidence and timers with a dead man's switch; $0.001–0.003 a call through the hub · [live](https://emporion.modelmarket.dev/) · [landing](https://alexar76.github.io/emporion/) |
+| **[SYMMARTYS](https://symmartys.modelmarket.dev/)** (live 0.5.0; publication pending) | **[SYMMARTYS](https://symmartys.modelmarket.dev/)** — public-record facts for agents that trade: EU VAT validity (VIES) with the consultation number, legal entities (GLEIF LEI), ECB reference rates, sanctions-list lookups (EU, OFAC SDN with wallet addresses, UK with the UN designations — a lookup, not a determination) and Bitcoin-anchored timestamp proofs (OpenTimestamps); every answer signed with its source, fetch time and SHA-256; since 0.2 also national company registers, EORI, domain registrations (RDAP), business days, web pages captured as evidence and timers with a dead man's switch; $0.001–0.003 a call through the hub · live 0.5.0; source and registry publication pending |
 | [**esim-operator-kit**](https://github.com/alexar76/esim-operator-kit) | **eSIM operator kit** — a travel-eSIM storefront for people and a seller node for AI agents (x402 in USDC, refunds of unused eSIMs, signed delivery receipts), on eSIM Access, Airalo, eSIM Go or the operator's own system; joins the federation as a node or as its own hub with one command, `./onboard.sh` · [demo](https://esim.modelmarket.dev) · [guides](https://esim.modelmarket.dev/kit) · [cases](https://esim.modelmarket.dev/kit/cases) |
 
 ### 🛡 Trust & security — who is allowed in, and who pays for finding out
@@ -300,7 +313,7 @@ know only a name, jump to the [A–Z index](#az).
 | [**dolos**](https://github.com/alexar76/dolos) | **DOLOS** (Δόλος) — dynamic **EVM red team**: forks the UNI bubble and throws real exploit txs to prove which flaws are actually live; Ed25519 findings, **sandbox-only** fix-loop · [live](https://dolos.modelmarket.dev/) · [landing](https://alexar76.github.io/dolos/) | on deployed contracts |
 | [**momus**](https://github.com/alexar76/momus) | **MOMUS** — autonomous HTTP/federation red team: safe read-only probes → Ed25519-signed findings; finds and signs but **cannot pay itself** · [live](https://momus.modelmarket.dev) · [landing](https://alexar76.github.io/momus/) | continuously, on live services |
 | [**treasury**](https://github.com/alexar76/treasury) | **Treasury** — separate bounty payer for MOMUS (own key and container); pays only after independent verify · [live](https://momus.modelmarket.dev/treasury) · [landing](https://alexar76.github.io/treasury/) | after verify |
-| [**warden**](https://github.com/alexar76/warden) | **WARDEN** — zero-dependency **MCP security firewall library** (not a server): static tool-def scan → signed threat feed → origin → pinning · [landing](https://warden.modelmarket.dev/) · [field survey: 1,108 public MCP servers](https://github.com/alexar76/warden/blob/main/docs/mcp-survey.md) | before a third-party tool reaches a host |
+| [**warden**](https://github.com/alexar76/warden) | **WARDEN** — zero-dependency **MCP security firewall**: a library, a CLI and a local stdio MCP server, not a hosted service: static tool-def scan → signed threat feed → origin → pinning · [landing](https://warden.modelmarket.dev/) · [field survey: 1,108 public MCP servers](https://github.com/alexar76/warden/blob/main/docs/mcp-survey.md) | before a third-party tool reaches a host |
 | [**histor**](https://github.com/alexar76/histor) | **HISTOR** (ἵστωρ) — public **transparency log of MCP tool definitions**: reads what every remote endpoint in the official MCP registry advertises (never calls a tool), signs it as MTL/1 labels, appends them to an RFC 9162 Merkle log with signed tree heads, and dates every change with a diff. Never calls a server safe · [live](https://histor.modelmarket.dev) · [landing](https://alexar76.github.io/histor/) | daily, on every remote endpoint in the official registry · and on `/check` |
 
 ### 🧠 Verifiable memory — what agents keep
@@ -342,7 +355,7 @@ know only a name, jump to the [A–Z index](#az).
 | [**dioscuri**](https://github.com/alexar76/dioscuri) | **DIOSCURI** — twin community agents (CASTOR/Telegram, POLLUX/Discord), MNEMOSYNE KB, AEGIS moderation · hosts the [THEOROS](https://alexar76.github.io/theoros/) canon slot · [landing](https://alexar76.github.io/dioscuri/) · [integration guide](https://github.com/alexar76/aicom/blob/main/docs/ecosystem/dioscuri-integration.md) |
 | [**theoros**](https://github.com/alexar76/theoros) | **THEOROS** — Agent Sovereignty Canon: seven precepts, cosmic landing, weekly `#the-canon` column (a DIOSCURI **collaboration**, not a third twin) · [landing](https://alexar76.github.io/theoros/) |
 | [**helios**](https://github.com/alexar76/helios) | **HELIOS** — broadcast pipeline: yaml → voiced video → YouTube (private by default until `helios approve`) · [landing](https://alexar76.github.io/helios/) · [integration](https://github.com/alexar76/aicom/blob/main/docs/ecosystem/helios-integration.md) · [@My-AI-Factory](https://www.youtube.com/@My-AI-Factory) |
-| **Telegram** | CASTOR — set `links.telegramChannel` in your `dioscuri.config.json` |
+| **Telegram** | CASTOR — [channel](https://t.me/just_for_agents) · [ask the bot](https://t.me/next_agent_market_bot) · self-host: `links.telegramChannel` in `dioscuri.config.json` |
 | **Discord** | POLLUX — set `links.discordInvite` in your `dioscuri.config.json` |
 
 ### 🎓 Learn & explore
@@ -400,7 +413,7 @@ it from any other angle.
 | [dioscuri](https://github.com/alexar76/dioscuri) | Community & broadcast | twin community agents |
 | [dolos](https://github.com/alexar76/dolos) | Trust & security | dynamic EVM red team (fork-isolated) |
 | [domain-operator-kit](https://github.com/alexar76/domain-operator-kit) | Real-world commerce | domains on Openprovider or Porkbun Sandbox |
-| [emporion](https://github.com/alexar76/emporion) | Real-world commerce | VAT, LEI, registers, FX, sanctions, timestamps, web capture & timers |
+| **[SYMMARTYS](https://symmartys.modelmarket.dev/)** (live 0.5.0; publication pending) | Real-world commerce | VAT, LEI, registers, FX, sanctions, timestamps, web capture & timers |
 | [esim-operator-kit](https://github.com/alexar76/esim-operator-kit) | Real-world commerce | travel eSIMs for people and AI agents |
 | [gaia](https://github.com/alexar76/gaia) | Physical world | attested IoT readings |
 | [helios](https://github.com/alexar76/helios) | Community & broadcast | yaml → voiced video → YouTube |
