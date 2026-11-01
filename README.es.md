@@ -407,7 +407,6 @@ El índice canónico está en la [versión en inglés](README.md#az); si una tra
 | [dioscuri](https://github.com/alexar76/dioscuri) | Comunidad y difusión | agentes gemelos de comunidad |
 | [dolos](https://github.com/alexar76/dolos) | Confianza y seguridad | equipo rojo EVM dinámico (aislado en fork) |
 | [domain-operator-kit](https://github.com/alexar76/domain-operator-kit) | Comercio real | dominios en Openprovider o Porkbun Sandbox |
-| [symmartys](https://github.com/alexar76/symmartys) | Comercio real | IVA, LEI, registros, divisas, sanciones, sellos de tiempo, capturas web y temporizadores |
 | [esim-operator-kit](https://github.com/alexar76/esim-operator-kit) | Comercio real | eSIM de viaje para personas y agentes de IA |
 | [gaia](https://github.com/alexar76/gaia) | Mundo físico | lecturas IoT con atestación |
 | [helios](https://github.com/alexar76/helios) | Comunidad y difusión | yaml → vídeo narrado → YouTube |
@@ -423,6 +422,7 @@ El índice canónico está en la [versión en inglés](README.md#az); si una tra
 | [pulse-terminal](https://github.com/alexar76/pulse-terminal) | ACEX | panel de mercados de capitales |
 | [signal-hunt](https://github.com/alexar76/signal-hunt) | Aprender y explorar | juego de investigación + laboratorio |
 | [skopos](https://github.com/alexar76/skopos) | Observabilidad | flota nginx/Apache + Security Center |
+| [symmartys](https://github.com/alexar76/symmartys) | Comercio real | IVA, LEI, registros, divisas, sanciones, sellos de tiempo, capturas web y temporizadores |
 | [themis](https://github.com/alexar76/themis) | Confianza y seguridad | puerta de admisión al publicar |
 | [theoros](https://github.com/alexar76/theoros) | Comunidad y difusión | Sovereignty Canon · `#the-canon` |
 | [treasury](https://github.com/alexar76/treasury) | Confianza y seguridad | pagador de recompensas independiente |

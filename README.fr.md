@@ -397,7 +397,6 @@ L’index de référence se trouve dans la [version anglaise](README.md#az) ; si
 | [dioscuri](https://github.com/alexar76/dioscuri) | Communauté et diffusion | agents communautaires jumeaux |
 | [dolos](https://github.com/alexar76/dolos) | Confiance et sécurité | équipe rouge EVM dynamique (isolée dans un fork) |
 | [domain-operator-kit](https://github.com/alexar76/domain-operator-kit) | Commerce réel | domaines sur Openprovider ou Porkbun Sandbox |
-| [symmartys](https://github.com/alexar76/symmartys) | Commerce réel | TVA, LEI, registres, change, sanctions, horodatages, captures web et minuteurs |
 | [esim-operator-kit](https://github.com/alexar76/esim-operator-kit) | Commerce réel | eSIM de voyage pour les gens et les agents IA |
 | [gaia](https://github.com/alexar76/gaia) | Monde physique | lectures IoT attestées |
 | [helios](https://github.com/alexar76/helios) | Communauté et diffusion | yaml → vidéo narrée → YouTube |
@@ -413,6 +412,7 @@ L’index de référence se trouve dans la [version anglaise](README.md#az) ; si
 | [pulse-terminal](https://github.com/alexar76/pulse-terminal) | ACEX | tableau de bord des marchés de capitaux |
 | [signal-hunt](https://github.com/alexar76/signal-hunt) | Apprendre et explorer | jeu d’enquête + laboratoire |
 | [skopos](https://github.com/alexar76/skopos) | Observabilité | flotte nginx/Apache + Security Center |
+| [symmartys](https://github.com/alexar76/symmartys) | Commerce réel | TVA, LEI, registres, change, sanctions, horodatages, captures web et minuteurs |
 | [themis](https://github.com/alexar76/themis) | Confiance et sécurité | porte d’admission à la publication |
 | [theoros](https://github.com/alexar76/theoros) | Communauté et diffusion | Sovereignty Canon · `#the-canon` |
 | [treasury](https://github.com/alexar76/treasury) | Confiance et sécurité | payeur de primes distinct |

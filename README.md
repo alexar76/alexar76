@@ -413,7 +413,6 @@ it from any other angle.
 | [dioscuri](https://github.com/alexar76/dioscuri) | Community & broadcast | twin community agents |
 | [dolos](https://github.com/alexar76/dolos) | Trust & security | dynamic EVM red team (fork-isolated) |
 | [domain-operator-kit](https://github.com/alexar76/domain-operator-kit) | Real-world commerce | domains on Openprovider or Porkbun Sandbox |
-| [symmartys](https://github.com/alexar76/symmartys) | Real-world commerce | VAT, LEI, registers, FX, sanctions, timestamps, web capture & timers |
 | [esim-operator-kit](https://github.com/alexar76/esim-operator-kit) | Real-world commerce | travel eSIMs for people and AI agents |
 | [gaia](https://github.com/alexar76/gaia) | Physical world | attested IoT readings |
 | [helios](https://github.com/alexar76/helios) | Community & broadcast | yaml → voiced video → YouTube |
@@ -429,6 +428,7 @@ it from any other angle.
 | [pulse-terminal](https://github.com/alexar76/pulse-terminal) | ACEX | capital-markets dashboard |
 | [signal-hunt](https://github.com/alexar76/signal-hunt) | Learn & explore | investigation game + lab |
 | [skopos](https://github.com/alexar76/skopos) | Observability | fleet nginx/Apache + Security Center |
+| [symmartys](https://github.com/alexar76/symmartys) | Real-world commerce | VAT, LEI, registers, FX, sanctions, timestamps, web capture & timers |
 | [themis](https://github.com/alexar76/themis) | Trust & security | publish-time admission gate |
 | [theoros](https://github.com/alexar76/theoros) | Community & broadcast | Sovereignty Canon · `#the-canon` |
 | [treasury](https://github.com/alexar76/treasury) | Trust & security | separate bounty payer |

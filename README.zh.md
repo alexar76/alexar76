@@ -398,7 +398,6 @@ git clone https://github.com/alexar76/aicom && cd aicom && ./start.sh --everythi
 | [dioscuri](https://github.com/alexar76/dioscuri) | 社区与传播 | 双生社区智能体 |
 | [dolos](https://github.com/alexar76/dolos) | 信任与安全 | 动态 EVM 红队（分叉隔离） |
 | [domain-operator-kit](https://github.com/alexar76/domain-operator-kit) | 真实商业 | Openprovider 或 Porkbun Sandbox 上的域名 |
-| [symmartys](https://github.com/alexar76/symmartys) | 真实商业 | 增值税、LEI、登记册、汇率、制裁、时间戳、网页快照与定时器 |
 | [esim-operator-kit](https://github.com/alexar76/esim-operator-kit) | 真实商业 | 面向用户和 AI 智能体的旅行 eSIM |
 | [gaia](https://github.com/alexar76/gaia) | 物理世界 | 具有证明（attestation）的 IoT 读数 |
 | [helios](https://github.com/alexar76/helios) | 社区与传播 | yaml → 配音视频 → YouTube |
@@ -414,6 +413,7 @@ git clone https://github.com/alexar76/aicom && cd aicom && ./start.sh --everythi
 | [pulse-terminal](https://github.com/alexar76/pulse-terminal) | ACEX | 资本市场仪表板 |
 | [signal-hunt](https://github.com/alexar76/signal-hunt) | 学习与探索 | 调查游戏 + 实验室 |
 | [skopos](https://github.com/alexar76/skopos) | 可观测性 | 机队 nginx/Apache + Security Center |
+| [symmartys](https://github.com/alexar76/symmartys) | 真实商业 | 增值税、LEI、登记册、汇率、制裁、时间戳、网页快照与定时器 |
 | [themis](https://github.com/alexar76/themis) | 信任与安全 | 发布时准入门控 |
 | [theoros](https://github.com/alexar76/theoros) | 社区与传播 | Sovereignty Canon · `#the-canon` |
 | [treasury](https://github.com/alexar76/treasury) | 信任与安全 | 独立赏金支付方 |

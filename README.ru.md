@@ -407,7 +407,6 @@ git clone https://github.com/alexar76/aicom && cd aicom && ./start.sh --everythi
 | [dioscuri](https://github.com/alexar76/dioscuri) | Сообщество и вещание | агенты-близнецы сообщества |
 | [dolos](https://github.com/alexar76/dolos) | Доверие и безопасность | динамическая красная команда EVM (изолирована в форке) |
 | [domain-operator-kit](https://github.com/alexar76/domain-operator-kit) | Реальная коммерция | домены на Openprovider или Porkbun Sandbox |
-| [symmartys](https://github.com/alexar76/symmartys) | Реальная коммерция | НДС, LEI, реестры, курсы, санкции, метки времени, снимки страниц и таймеры |
 | [esim-operator-kit](https://github.com/alexar76/esim-operator-kit) | Реальная коммерция | travel eSIM для людей и ИИ-агентов |
 | [gaia](https://github.com/alexar76/gaia) | Физический мир | аттестованные показания IoT |
 | [helios](https://github.com/alexar76/helios) | Сообщество и вещание | yaml → озвученное видео → YouTube |
@@ -423,6 +422,7 @@ git clone https://github.com/alexar76/aicom && cd aicom && ./start.sh --everythi
 | [pulse-terminal](https://github.com/alexar76/pulse-terminal) | ACEX | панель рынков капитала |
 | [signal-hunt](https://github.com/alexar76/signal-hunt) | Обучение и исследование | исследовательская игра + лаборатория |
 | [skopos](https://github.com/alexar76/skopos) | Наблюдаемость | nginx/Apache флота + Security Center |
+| [symmartys](https://github.com/alexar76/symmartys) | Реальная коммерция | НДС, LEI, реестры, курсы, санкции, метки времени, снимки страниц и таймеры |
 | [themis](https://github.com/alexar76/themis) | Доверие и безопасность | шлюз допуска во время публикации |
 | [theoros](https://github.com/alexar76/theoros) | Сообщество и вещание | Sovereignty Canon · `#the-canon` |
 | [treasury](https://github.com/alexar76/treasury) | Доверие и безопасность | отдельный плательщик вознаграждений |
