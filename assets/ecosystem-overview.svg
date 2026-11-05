@@ -64,8 +64,8 @@
     <text x="727" y="463" text-anchor="middle">CapShares</text>
     <rect x="120" y="148" width="78" height="18" rx="4" fill="#1a2740"/>
     <text x="159" y="161" text-anchor="middle">fleet watch</text>
-    <rect x="728" y="202" width="112" height="18" rx="4" fill="#1a2740"/>
-    <text x="784" y="215" text-anchor="middle">read-only analytics</text>
+    <rect x="680" y="202" width="112" height="18" rx="4" fill="#1a2740"/>
+    <text x="736" y="215" text-anchor="middle">read-only analytics</text>
     <rect x="300" y="600" width="72" height="18" rx="4" fill="#1a2740"/>
     <text x="336" y="613" text-anchor="middle">find · sign</text>
     <rect x="430" y="600" width="88" height="18" rx="4" fill="#1a2740"/>

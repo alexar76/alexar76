@@ -44,26 +44,6 @@
   <sub>Zoomable 3D ecosystem graph — <a href="https://monitor.modelmarket.dev/">Alien Monitor</a></sub>
 </p>
 
-<p align="center">
-  <a href="assets/ecosystem-overview.svg">
-    <img src="assets/ecosystem-overview.svg" alt="Ecosystem overview: Factory scaffolds onto HESTIA; HESTIA announces to Hub; Oracles and METIS feed Hub; ARGUS consumes; ACEX finances; SKOPOS observes; MOMUS finds; Treasury pays; LOGOS analyzes the federation; Attested Memory keeps verifiable agent memory; eSIM operators sell to agents over x402 and bring signed delivery receipts to the Hub; SYMMARTYS sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox." width="900">
-  </a>
-</p>
-
-<p align="center">
-  <sub>Money & trust spine — click the diagram for full size.</sub>
-</p>
-
-<p align="center">
-  <a href="https://oracles.modelmarket.dev">
-    <img src="https://raw.githubusercontent.com/alexar76/alexar76/main/assets/oracles-hero.png" alt="Oracles — seventeen verifiable math capabilities for the agent economy: Platon randomness, Chronos VDF, Lattice, Murmuration, Lumen, Colony, Turing, Percola, Fermat, Ablation, Landauer, Sortes, Gauss, Aestus, Betti, Kantor, Fourier — each with live 3D cosmic visuals" width="900">
-  </a>
-</p>
-
-<p align="center">
-  <sub><b>Oracles</b> — signed randomness, delay, consensus & trust math agents pay for · <a href="https://oracles.modelmarket.dev"><b>live portal</b></a> · <a href="https://github.com/alexar76/oracles">GitHub</a></sub>
-</p>
-
 ---
 
 ### Next, if you know who you are
@@ -190,11 +170,20 @@ Below, every repo appears in **exactly one** group — the role it plays in that
 know only a name, jump to the [A–Z index](#az).
 
 <details>
-<summary><b>🗺️ Ecosystem map</b> — the money & trust spine as edges (click to expand)</summary>
+<summary><b>🗺️ Ecosystem map</b> — the money & trust spine diagram and its edges, and the oracle family (click to expand)</summary>
 <br/>
 
-> The overview diagram is at the **top of this README**. GitHub Mermaid truncates node labels, so
-> the map stays SVG. Zoomable 3D: [Alien Monitor](https://monitor.modelmarket.dev/).
+> GitHub Mermaid truncates node labels, so the map is an SVG. Zoomable 3D: [Alien Monitor](https://monitor.modelmarket.dev/).
+
+<p align="center">
+  <a href="assets/ecosystem-overview.svg">
+    <img src="assets/ecosystem-overview.svg" alt="Ecosystem overview: Factory scaffolds onto HESTIA; HESTIA announces to Hub; Oracles and METIS feed Hub; ARGUS consumes; ACEX finances; SKOPOS observes; MOMUS finds; Treasury pays; LOGOS analyzes the federation; Attested Memory keeps verifiable agent memory; eSIM operators sell to agents over x402 and bring signed delivery receipts to the Hub; SYMMARTYS sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox." width="900">
+  </a>
+</p>
+
+<p align="center">
+  <sub>Money & trust spine — click the diagram for full size.</sub>
+</p>
 
 | From | To | Flow |
 | --- | --- | --- |
@@ -206,7 +195,7 @@ know only a name, jump to the [A–Z index](#az).
 | Oracles ×17 | Hub | signed verifiable math |
 | GAIA | Hub | attested physical-world readings |
 | eSIM operator kit | Hub | signed offers · a federation node or the operator's own hub · buyers' signed delivery receipts → `deliveries_30d` |
-| [SYMMARTYS](https://symmartys.modelmarket.dev/) | Hub | VIES VAT · GLEIF LEI · ECB reference rates · EU / OFAC / UK sanctions lookups (UN designations included) · OpenTimestamps proofs · company registers (NO · FR · CZ · FI) · EORI · RDAP · business days · Bitcoin-anchored web capture · timers with a dead man's switch — each answer signed with its source, fetch time and SHA-256; sold only through the hub |
+| SYMMARTYS | Hub | VIES VAT · GLEIF LEI · ECB reference rates · EU / OFAC / UK sanctions lookups (UN designations included) · OpenTimestamps proofs · company registers (NO · FR · CZ · FI) · EORI · RDAP · business days · Bitcoin-anchored web capture · timers with a dead man's switch — each answer signed with its source, fetch time and SHA-256; sold only through the hub |
 | ATLAS | GAIA | planetary sensor map over those readings |
 | Cite desks | ATLAS / Hub | focused B2B evidence products that buy `atlas.*` / `gaia.*` |
 | METIS | Hub | verify cognition |
@@ -222,6 +211,16 @@ know only a name, jump to the [A–Z index](#az).
 | Hub / MOMUS / SKOPOS / Treasury | LOGOS | read-only snapshots · anomalies · insights |
 | Alien Monitor | Hub | live 3D graph |
 | ARGUS / agents | Attested Memory | write · search · share |
+
+<p align="center">
+  <a href="https://oracles.modelmarket.dev">
+    <img src="https://raw.githubusercontent.com/alexar76/alexar76/main/assets/oracles-hero.png" alt="Oracles — seventeen verifiable math capabilities for the agent economy: Platon randomness, Chronos VDF, Lattice, Murmuration, Lumen, Colony, Turing, Percola, Fermat, Ablation, Landauer, Sortes, Gauss, Aestus, Betti, Kantor, Fourier — each with live 3D cosmic visuals" width="900">
+  </a>
+</p>
+
+<p align="center">
+  <sub><b>Oracles</b> — signed randomness, delay, consensus & trust math agents pay for · <a href="https://oracles.modelmarket.dev"><b>live portal</b></a> · <a href="https://github.com/alexar76/oracles">GitHub</a></sub>
+</p>
 
 </details>
 
