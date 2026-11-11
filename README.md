@@ -1,7 +1,7 @@
 <h1 align="center">Aleksandr Artamokhov</h1>
 
 <!-- ecosystem-entry-points -->
-**Start here:** [Factory landing](https://modeldev.modelmarket.dev/) · [Ecosystem atlas](https://ecosystem.modelmarket.dev/) · [Working factory & storefront](https://magic-ai-factory.com/).
+[HISTOR](https://histor.modelmarket.dev/) · [WARDEN](https://warden.modelmarket.dev/) · [Free checks](https://modelmarket.dev/tools/?utm_source=github&utm_medium=profile&utm_campaign=alexar76)
 <!-- /ecosystem-entry-points -->
 
 <p align="center"><b>Public, witnessed records and checks for the tools AI agents use.</b></p>
@@ -51,8 +51,8 @@
 | You | Go here |
 | --- | --- |
 | **Want the factory in a browser** | [magic-ai-factory.com](https://magic-ai-factory.com) — guest try-out + [admin demo](https://magic-ai-factory.com/admin/login) (passwordless: `admin`, then **Enter admin demo**) |
-| **Want the architecture** | [Ecosystem knowledge base](https://github.com/alexar76/aicom/blob/main/docs/ecosystem/knowledge-base.md) · [whitepaper](https://github.com/alexar76/aicom/blob/main/docs/ecosystem/whitepaper/en.md) · [use cases](https://use.modelmarket.dev/) |
-| **Want to run the fleet** | `./start.sh --everything` below, or [VPS quick-start](https://github.com/alexar76/aicom/blob/main/docs/quickstart-ecosystem-deploy.md) |
+| **Want the architecture** | [Ecosystem atlas](https://ecosystem.modelmarket.dev/) · [knowledge base](https://github.com/alexar76/aicom/blob/main/docs/ecosystem/knowledge-base.md) · [whitepaper](https://github.com/alexar76/aicom/blob/main/docs/ecosystem/whitepaper/en.md) · [use cases](https://use.modelmarket.dev/) |
+| **Want to run the Factory locally** | [Quick start for the public repository](https://github.com/alexar76/aicom#quick-start) |
 | **Want to secure your MCP setup** | `npx -y @aimarket/warden scan` vets every MCP server your clients start, before a model reads its tools — no account, no key · [WARDEN](https://github.com/alexar76/warden) · [scan guide](https://github.com/alexar76/warden/blob/main/docs/scan.md) |
 | **Want to know whether an MCP server changed** | [HISTOR](https://github.com/alexar76/histor) reads what 88k+ servers advertise every day and signs it into a public Merkle log · [/check](https://histor.modelmarket.dev/) · [open dataset, weekly](https://histor.modelmarket.dev/datasets/) |
 | **Want to publish a provider** | `uvx create-aimarket-agent my-agent --kind data-provider --metis` · [full security-agent tutorial](https://github.com/alexar76/create-aimarket-agent/blob/main/docs/tutorials/themis.en.md) · [finished agent](https://github.com/alexar76/themis) · host the process on **[HESTIA](https://github.com/alexar76/hestia)** (hosted runtime, not the Hub) |
@@ -116,32 +116,20 @@ uvx create-aimarket-agent my-agent --kind data-provider --metis
 
 ---
 
-### Run the whole thing
+### Run the Factory locally
 
-One command brings the entire economy up on a VPS or a laptop — Factory, Hub, Service Mesh, the
-oracle family, Metis, LOGOS, GAIA, ATLAS, ARGUS, MOMUS + Treasury, SKOPOS, DIOSCURI, HELIOS — and opens the
-Alien Monitor with the live graph pulsing.
-
-```bash
-git clone https://github.com/alexar76/aicom && cd aicom && ./start.sh --everything
-```
-
-It generates every secret for itself, prints them **once**, waits until each service actually answers
-its health check, and only then opens the monitor. If something did not come up it tells you which and
-stops, rather than opening a page that lies to you.
-
-Reached at `http://<your-ip>:<port>` — no nginx, no TLS, no domains. Bound to localhost by default;
-`--bind 0.0.0.0` exposes it and says exactly which control-plane ports that opens.
+Try the [hosted Factory demo](https://magic-ai-factory.com/) in a browser, or read [how the Factory works](https://modeldev.modelmarket.dev/).
+To run it locally, have Git, Bash, Python 3, `curl`, and a running Docker Engine or Docker Desktop with Compose v2.
 
 ```bash
-./start.sh                 # core only: Factory + Hub + Mesh + Monitor — a laptop tier
-./start.sh --everything    # the full fleet, ~40 containers
-./start.sh --down          # stop, keep the data
+git clone https://github.com/alexar76/aicom.git
+cd aicom
+cp .env.demo .env
+# For builds with AI agents, set a supported provider key in .env, such as DEEPSEEK_API_KEY.
+./start.sh
 ```
 
-**What it will not do:** deploy contracts to any real chain (that is deliberately a separate script)
-and spend real money — crypto stays off and the bundled chain is fake-funded and ephemeral.
-Full runbook: [docs/deploy-everything.md](https://github.com/alexar76/aicom/blob/main/docs/deploy-everything.md) · 2-min walkthrough: [YouTube](https://youtu.be/Gg9a52-ZbNA)
+The public clone starts the Factory with Prometheus and Grafana at `http://localhost:9080`. The starter uses templated output until you configure an LLM key. The full fleet requires the complete monorepo. Use the [hosted Hub](https://github.com/alexar76/aicom/blob/main/docs/hosted-mcp-endpoint.md) from an MCP client at `https://modelmarket.dev/mcp`.
 
 ---
 
