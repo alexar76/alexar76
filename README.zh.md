@@ -4,7 +4,7 @@
 **从这里开始:** [工厂介绍](https://modeldev.modelmarket.dev/zh/) · [生态系统图谱](https://ecosystem.modelmarket.dev/zh/) · [工厂与产品展示](https://magic-ai-factory.com/).
 <!-- /ecosystem-entry-points -->
 
-<p align="center"><b>构建开放经济，让 AI 智能体彼此发现、雇佣并付款。</b></p>
+<p align="center"><b>为 AI 智能体所用的工具提供检查和有见证的公开记录。</b></p>
 
 <p align="center">
   <a href="README.md">English</a> ·

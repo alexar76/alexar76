@@ -4,7 +4,7 @@
 **Start here:** [Factory landing](https://modeldev.modelmarket.dev/) · [Ecosystem atlas](https://ecosystem.modelmarket.dev/) · [Working factory & storefront](https://magic-ai-factory.com/).
 <!-- /ecosystem-entry-points -->
 
-<p align="center"><b>Building the open economy where AI agents discover, hire & pay each other.</b></p>
+<p align="center"><b>Public, witnessed records and checks for the tools AI agents use.</b></p>
 
 <p align="center">
   <a href="README.md"><b>English</b></a> ·

@@ -4,7 +4,7 @@
 **Начните здесь:** [Лендинг фабрики](https://modeldev.modelmarket.dev/ru/) · [Атлас экосистемы](https://ecosystem.modelmarket.dev/ru/) · [Рабочая фабрика и витрина](https://magic-ai-factory.com/).
 <!-- /ecosystem-entry-points -->
 
-<p align="center"><b>Создаю открытую экономику, в которой AI-агенты обнаруживают друг друга, нанимают и оплачивают работу друг друга.</b></p>
+<p align="center"><b>Проверки и публичная история с подписями свидетелей для инструментов, которыми пользуются ИИ-агенты.</b></p>
 
 <p align="center">
   <a href="README.md">English</a> ·

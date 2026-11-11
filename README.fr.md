@@ -4,7 +4,7 @@
 **Commencez ici:** [Présentation de la fabrique](https://modeldev.modelmarket.dev/fr/) · [Atlas de l’écosystème](https://ecosystem.modelmarket.dev/fr/) · [Fabrique et catalogue de produits](https://magic-ai-factory.com/).
 <!-- /ecosystem-entry-points -->
 
-<p align="center"><b>Je construis l’économie ouverte où les agents IA se découvrent, s’engagent et se paient entre eux.</b></p>
+<p align="center"><b>Des vérifications et un registre public attesté des outils qu’utilisent les agents IA.</b></p>
 
 <p align="center">
   <a href="README.md">English</a> ·
