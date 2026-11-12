@@ -1,7 +1,7 @@
 <h1 align="center">Aleksandr Artamokhov</h1>
 
 <!-- ecosystem-entry-points -->
-[HISTOR](https://histor.modelmarket.dev/) · [WARDEN](https://warden.modelmarket.dev/) · [Free checks](https://modelmarket.dev/tools/?utm_source=github&utm_medium=profile&utm_campaign=alexar76)
+[See a recorded MCP tool change](https://histor.modelmarket.dev/s/236eb5f0481cc99c) · [Scan a tool list with WARDEN](https://modelmarket.dev/tools/warden-scan) · [Implement the tool-set digest](https://github.com/alexar76/mcp-tool-set-digest)
 <!-- /ecosystem-entry-points -->
 
 <p align="center"><b>Public, witnessed records and checks for the tools AI agents use.</b></p>
@@ -27,7 +27,7 @@
 
 | | What you get | Open |
 | --- | --- | --- |
-| **WARDEN** | Check every MCP server on your machine before its tools reach your model — no account, no key | `npx -y @aimarket/warden scan` · [warden.modelmarket.dev](https://warden.modelmarket.dev/) |
+| **MCP tool firewall (WARDEN)** | Run a one-time scan of configured servers. To enforce reviewed definitions during use, set up the stdio wrapper. | `npx -y @aimarket/warden@0.26.0 scan` · [`@aimarket/warden`](https://www.npmjs.com/package/@aimarket/warden) |
 | **HISTOR open data** | What every remote MCP server in the official registry advertised, and every change, signed, monthly (CC BY 4.0) | [Hugging Face](https://huggingface.co/datasets/alexar76/histor-mcp-tool-definitions) · [Zenodo DOI](https://doi.org/10.5281/zenodo.23512759) |
 | **Free checks** | x402 endpoint, MCP diff, WARDEN scan, HISTOR check and tool-list token cost — in the browser | [modelmarket.dev/tools](https://modelmarket.dev/tools/?utm_source=github&utm_medium=profile&utm_campaign=alexar76) |
 | **Playground** | Send one allow-listed GAIA reading through Hub and Metis, then inspect the signed receipt | [play.modelmarket.dev](https://play.modelmarket.dev/) · [source](https://github.com/alexar76/aimarket-playground) |
@@ -53,8 +53,6 @@
 | **Want the factory in a browser** | [magic-ai-factory.com](https://magic-ai-factory.com) — guest try-out + [admin demo](https://magic-ai-factory.com/admin/login) (passwordless: `admin`, then **Enter admin demo**) |
 | **Want the architecture** | [Ecosystem atlas](https://ecosystem.modelmarket.dev/) · [knowledge base](https://github.com/alexar76/aicom/blob/main/docs/ecosystem/knowledge-base.md) · [whitepaper](https://github.com/alexar76/aicom/blob/main/docs/ecosystem/whitepaper/en.md) · [use cases](https://use.modelmarket.dev/) |
 | **Want to run the Factory locally** | [Quick start for the public repository](https://github.com/alexar76/aicom#quick-start) |
-| **Want to secure your MCP setup** | `npx -y @aimarket/warden scan` vets every MCP server your clients start, before a model reads its tools — no account, no key · [WARDEN](https://github.com/alexar76/warden) · [scan guide](https://github.com/alexar76/warden/blob/main/docs/scan.md) |
-| **Want to know whether an MCP server changed** | [HISTOR](https://github.com/alexar76/histor) reads what 88k+ servers advertise every day and signs it into a public Merkle log · [/check](https://histor.modelmarket.dev/) · [open dataset, weekly](https://histor.modelmarket.dev/datasets/) |
 | **Want to publish a provider** | `uvx create-aimarket-agent my-agent --kind data-provider --metis` · [full security-agent tutorial](https://github.com/alexar76/create-aimarket-agent/blob/main/docs/tutorials/themis.en.md) · [finished agent](https://github.com/alexar76/themis) · host the process on **[HESTIA](https://github.com/alexar76/hestia)** (hosted runtime, not the Hub) |
 | **Want to contribute** | [Discussions](https://github.com/alexar76/aicom/discussions) · [good first issues](https://github.com/alexar76/aicom/labels/good%20first%20issue) · [𝕏 @build_ai_infra](https://x.com/build_ai_infra) |
 
