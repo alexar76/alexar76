@@ -1,7 +1,7 @@
 <h1 align="center">Aleksandr Artamokhov</h1>
 
 <!-- ecosystem-entry-points -->
-[See a recorded MCP tool change](https://histor.modelmarket.dev/s/236eb5f0481cc99c) · [Scan a tool list with WARDEN](https://modelmarket.dev/tools/warden-scan) · [Implement the tool-set digest](https://github.com/alexar76/mcp-tool-set-digest)
+[See a recorded MCP tool change](https://histor.modelmarket.dev/s/236eb5f0481cc99c) · [Scan a tool list with WARDEN](https://modelmarket.dev/tools/warden-scan) · [Implement the tool-set digest](https://github.com/alexar76/mcp-tool-set-digest) · [All eleven ways in](https://ecosystem.modelmarket.dev/#ways-in)
 <!-- /ecosystem-entry-points -->
 
 <p align="center"><b>Public, witnessed records and checks for the tools AI agents use.</b></p>
@@ -300,6 +300,7 @@ know only a name, jump to the [A–Z index](#az).
 | [**treasury**](https://github.com/alexar76/treasury) | **Treasury** — separate bounty payer for MOMUS (own key and container); pays only after independent verify · [live](https://momus.modelmarket.dev/treasury) · [landing](https://alexar76.github.io/treasury/) | after verify |
 | [**warden**](https://github.com/alexar76/warden) | **WARDEN** — zero-dependency **MCP security firewall**: a library, a CLI and a local stdio MCP server, not a hosted service: static tool-def scan → signed threat feed → origin → pinning · [landing](https://warden.modelmarket.dev/) · [field survey: 1,108 public MCP servers](https://github.com/alexar76/warden/blob/main/docs/mcp-survey.md) | before a third-party tool reaches a host |
 | [**histor**](https://github.com/alexar76/histor) | **HISTOR** (ἵστωρ) — public **transparency log of MCP tool definitions**: reads what every remote endpoint in the official MCP registry advertises (never calls a tool), signs it as MTL/1 labels, appends them to an RFC 9162 Merkle log with signed tree heads, and dates every change with a diff. Never calls a server safe · [live](https://histor.modelmarket.dev) · [landing](https://alexar76.github.io/histor/) | daily, on every remote endpoint in the official registry · and on `/check` |
+| [**mcp-tool-set-digest**](https://github.com/alexar76/mcp-tool-set-digest) | **MCP tool-set digest** — the specification `mcp-tool-set-digest/1` (draft of 2026-11-13): one way to hash what an MCP server says about its tools, so two parties who never exchanged the tool text can tell whether they were served the same thing; a contract digest and an extras digest, 73 test vectors, dependency-free references in Python, JavaScript and Go · the digest HISTOR, WARDEN and CrawlCheck compare | whenever a tool list is pinned or compared |
 
 ### 🧠 Verifiable memory — what agents keep
 <sub>Write, search, and share memory that other agents can check.</sub>
@@ -406,6 +407,7 @@ it from any other angle.
 | [linked-in-profile-coach](https://github.com/alexar76/linked-in-profile-coach) | Example app | Flutter + SDK, real product |
 | [logos](https://github.com/alexar76/logos) | Observability | read-only federation analytics |
 | [lottery](https://github.com/alexar76/lottery) | Verifiable compute | unbiasable on-chain draws · machine UBI |
+| [mcp-tool-set-digest](https://github.com/alexar76/mcp-tool-set-digest) | Trust & security | hash of an MCP server's tool list |
 | [metis](https://github.com/alexar76/metis) | Verifiable compute | the verification tier |
 | [momus](https://github.com/alexar76/momus) | Trust & security | HTTP/federation red team |
 | [oracles](https://github.com/alexar76/oracles) | Verifiable compute | 17 signed math capabilities |
