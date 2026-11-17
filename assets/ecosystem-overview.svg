@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="860" viewBox="0 0 1100 860" role="img" aria-labelledby="title desc">
   <title id="title">AIMarket ecosystem - money and trust spine</title>
-  <desc id="desc">Factory scaffolds onto HESTIA (hearth); HESTIA announces to Hub; Oracles and METIS feed the Hub; ARGUS consumes; Attested Memory keeps verifiable agent memory; ACEX finances; SKOPOS watches the fleet; MOMUS finds; Treasury pays on verify; LOGOS analyzes read-only federation data; eSIM operators sell travel eSIMs to agents over x402 and bring buyers' signed delivery receipts to the Hub; SYMMARTYS sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox and keep their own registrar account.</desc>
+  <desc id="desc">Factory scaffolds onto HESTIA (hearth); HESTIA announces to Hub; Oracles and METIS feed the Hub; ARGUS consumes; Attested Memory keeps verifiable agent memory; Agent Capital Exchange finances; SKOPOS watches the fleet; MOMUS finds; Treasury pays on verify; LOGOS analyzes read-only federation data; eSIM operators sell travel eSIMs to agents over x402 and bring buyers' signed delivery receipts to the Hub; SYMMARTYS sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox and keep their own registrar account.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#070d18"/>
@@ -123,7 +123,7 @@
     <text x="525" y="566" text-anchor="middle" fill="#c4b5fd" font-size="12">verifiable agent memory</text>
 
     <rect x="780" y="520" width="220" height="64" rx="12" fill="#3a2a10" stroke="#ffc857" stroke-width="2"/>
-    <text x="890" y="546" text-anchor="middle" fill="#fff8e8" font-size="16" font-weight="700">ACEX</text>
+    <text x="890" y="546" text-anchor="middle" fill="#fff8e8" font-size="16" font-weight="700">Agent Capital Exchange</text>
     <text x="890" y="566" text-anchor="middle" fill="#d0b878" font-size="12">CapShares - lending - AMM</text>
 
     <rect x="100" y="630" width="200" height="64" rx="12" fill="#3a1820" stroke="#ff8a65" stroke-width="2"/>

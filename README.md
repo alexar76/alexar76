@@ -27,7 +27,7 @@
 
 | | What you get | Open |
 | --- | --- | --- |
-| **MCP tool firewall (WARDEN)** | Run a one-time scan of configured servers. To enforce reviewed definitions during use, set up the stdio wrapper. | `npx -y @aimarket/warden@0.27.0 scan` · [`@aimarket/warden`](https://www.npmjs.com/package/@aimarket/warden) |
+| **MCP tool firewall (WARDEN)** | Run a one-time scan of configured servers. To enforce reviewed definitions during use, set up the stdio wrapper. | `npx -y @aimarket/warden@0.29.0 scan` · [`@aimarket/warden`](https://www.npmjs.com/package/@aimarket/warden) |
 | **HISTOR open data** | What every remote MCP server in the official registry advertised, and every change, signed, monthly (CC BY 4.0) | [Hugging Face](https://huggingface.co/datasets/alexar76/histor-mcp-tool-definitions) · [Zenodo DOI](https://doi.org/10.5281/zenodo.23512759) |
 | **Free checks** | x402 endpoint, MCP diff, WARDEN scan, HISTOR check and tool-list token cost — in the browser | [modelmarket.dev/tools](https://modelmarket.dev/tools/?utm_source=github&utm_medium=profile&utm_campaign=alexar76) |
 | **Playground** | Send one allow-listed GAIA reading through Hub and Metis, then inspect the signed receipt | [play.modelmarket.dev](https://play.modelmarket.dev/) · [source](https://github.com/alexar76/aimarket-playground) |
@@ -56,7 +56,7 @@
 | **Want to publish a provider** | `uvx create-aimarket-agent my-agent --kind data-provider --metis` · [full security-agent tutorial](https://github.com/alexar76/create-aimarket-agent/blob/main/docs/tutorials/themis.en.md) · [finished agent](https://github.com/alexar76/themis) · host the process on **[HESTIA](https://github.com/alexar76/hestia)** (hosted runtime, not the Hub) |
 | **Want to contribute** | [Discussions](https://github.com/alexar76/aicom/discussions) · [good first issues](https://github.com/alexar76/aicom/labels/good%20first%20issue) · [𝕏 @build_ai_infra](https://x.com/build_ai_infra) |
 
-The repo catalog is **below**, grouped by the role each repo plays — Factory, Hosted runtime, AIMarket core, Build & connect, MCP gateways, Verifiable compute, Physical world, Trust & security, Verifiable memory, the client you run, ACEX, Observability, Community & broadcast, Learn & explore. Every repo sits in exactly one group, with its live landing in that row, and the [A–Z index](#az) finds it from any other angle — there is no second sitemap here.
+The repo catalog is **below**, grouped by the role each repo plays — Factory, Hosted runtime, AIMarket core, Build & connect, MCP gateways, Verifiable compute, Physical world, Trust & security, Verifiable memory, the client you run, Agent Capital Exchange, Observability, Community & broadcast, Learn & explore. Every repo sits in exactly one group, with its live landing in that row, and the [A–Z index](#az) finds it from any other angle — there is no second sitemap here.
 
 Also live, no login: [Agent Arena](https://magic-ai-factory.com/arena/) · [Factory IQ](https://magic-ai-factory.com/iq) · [Pulse Terminal](https://magic-ai-factory.com/pulse/) · [Signal Hunt](https://hunt.modelmarket.dev/) · [Lottery](https://lottery.modelmarket.dev/)
 
@@ -149,7 +149,7 @@ One pipeline, in the order trust and money actually move. Each stage names the r
 | 6 | **Verify** | **METIS** cognition · **BASANOS** Solidity at a pin · **DOLOS** live EVM exploits · **MOMUS** HTTP/federation · **WARDEN** third-party MCP · **HISTOR** what third-party MCP servers advertised, over time · **Attested Memory** verifiable memory agents keep |
 | 7 | **Consume** | **ARGUS** — the demand-side client humans and agents actually run · it bought a travel eSIM for its owner and got the money back, on Base ([case](https://github.com/alexar76/argus/blob/main/docs/use-case-esim-purchase-refund.md)) |
 | 8 | **Settle** | escrow, channels, and **Treasury** bounties paid only after independent verify |
-| 9 | **Finance** | **ACEX** prices, lists and lends against agents |
+| 9 | **Finance** | **Agent Capital Exchange** prices, lists and lends against agents |
 | 10 | **Watch** | **SKOPOS** the fleet · **LOGOS** the federation · **Alien Monitor** all of it in live 3D |
 
 Below, every repo appears in **exactly one** group — the role it plays in that pipeline. If you
@@ -163,7 +163,7 @@ know only a name, jump to the [A–Z index](#az).
 
 <p align="center">
   <a href="assets/ecosystem-overview.svg">
-    <img src="assets/ecosystem-overview.svg" alt="Ecosystem overview: Factory scaffolds onto HESTIA; HESTIA announces to Hub; Oracles and METIS feed Hub; ARGUS consumes; ACEX finances; SKOPOS observes; MOMUS finds; Treasury pays; LOGOS analyzes the federation; Attested Memory keeps verifiable agent memory; eSIM operators sell to agents over x402 and bring signed delivery receipts to the Hub; SYMMARTYS sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox." width="900">
+    <img src="assets/ecosystem-overview.svg" alt="Ecosystem overview: Factory scaffolds onto HESTIA; HESTIA announces to Hub; Oracles and METIS feed Hub; ARGUS consumes; Agent Capital Exchange finances; SKOPOS observes; MOMUS finds; Treasury pays; LOGOS analyzes the federation; Attested Memory keeps verifiable agent memory; eSIM operators sell to agents over x402 and bring signed delivery receipts to the Hub; SYMMARTYS sells commerce lookups (EU VAT, LEI, ECB reference rates, sanctions lists, timestamp proofs) through the Hub; domain operators register a quoted domain for an agent over x402 on Openprovider or Porkbun Sandbox." width="900">
   </a>
 </p>
 
@@ -176,7 +176,7 @@ know only a name, jump to the [A–Z index](#az).
 | Factory / aicom | HESTIA | scaffold · signed deploy onto the hosted runtime |
 | HESTIA | Hub | explicit announce (hosting ≠ listing) |
 | THEMIS | Hub | publish admission · approve / review / reject |
-| BASANOS | ACEX / contracts | Solidity scan · signed assurance pack |
+| BASANOS | Agent Capital Exchange / contracts | Solidity scan · signed assurance pack |
 | DOLOS | UNI Anvil (fork) | dynamic EVM red team · Ed25519 findings |
 | Oracles ×17 | Hub | signed verifiable math |
 | GAIA | Hub | attested physical-world readings |
@@ -189,7 +189,7 @@ know only a name, jump to the [A–Z index](#az).
 | ARGUS / agents | eSIM operator | x402 order straight to the seller's wallet · refund of an unused eSIM |
 | Domain operator kit | Hub | public quotes · Openprovider or Porkbun Sandbox, or the operator's own HTTP supplier · the order and the x402 payment go to the seller |
 | Agents | Domain operator | x402 in USDC on Base to the operator's receiving wallet · fixed markup · the registrar account stays with the operator |
-| Hub | ACEX | CapShares |
+| Hub | Agent Capital Exchange | CapShares |
 | SKOPOS | Factory / Hub | fleet watch |
 | MOMUS | Factory / Hub | find · sign |
 | HISTOR | MCP clients · Hub | signed MTL/1 labels · `/check` · `histor.check@v1` |
@@ -316,13 +316,13 @@ know only a name, jump to the [A–Z index](#az).
 | --- | --- |
 | [**argus**](https://github.com/alexar76/argus) | **ARGUS-3** — demand-side reference agent and the only intended human touchpoint: WARDEN-gated MCP (LUMEN reputation), multi-provider LLM, Telegram; native AIMarket consumer/provider; crypto **off by default** · [live landing](https://magic-ai-factory.com/argus/) |
 
-### 📈 ACEX — the capital market for agents
+### 📈 Agent Capital Exchange — the capital market for agents
 <sub>Stage 9. Where an agent's future earnings get priced.</sub>
 
 | Repo | What it is |
 | --- | --- |
 | [**acex**](https://github.com/alexar76/acex) | Agent Capital Exchange — listings, CapShares, lending, and AMM (Solidity) |
-| [**pulse-terminal**](https://github.com/alexar76/pulse-terminal) | ACEX capital-markets dashboard with live agent pricing |
+| [**pulse-terminal**](https://github.com/alexar76/pulse-terminal) | Agent Capital Exchange capital-markets dashboard with live agent pricing |
 
 ### 🌌 Observability — reading the system, changing nothing
 <sub>Stage 10. All three are read-only by design: they measure, they do not act.</sub>
@@ -372,7 +372,7 @@ it from any other angle.
 
 | Repo | Group | One line |
 | --- | --- | --- |
-| [acex](https://github.com/alexar76/acex) | ACEX | CapShares, lending, AMM |
+| [acex](https://github.com/alexar76/acex) | Agent Capital Exchange | CapShares, lending, AMM |
 | [ai-service-mesh](https://github.com/alexar76/ai-service-mesh) | AIMarket core | discovery, escrow, payments |
 | [aicom](https://github.com/alexar76/aicom) | Factory | the autonomous product pipeline |
 | [aicom-landing](https://github.com/alexar76/aicom-landing) | Factory | fast marketing landings |
@@ -412,7 +412,7 @@ it from any other angle.
 | [momus](https://github.com/alexar76/momus) | Trust & security | HTTP/federation red team |
 | [oracles](https://github.com/alexar76/oracles) | Verifiable compute | 17 signed math capabilities |
 | [platon](https://github.com/alexar76/platon) | Verifiable compute | educational cave for oracle #1 |
-| [pulse-terminal](https://github.com/alexar76/pulse-terminal) | ACEX | capital-markets dashboard |
+| [pulse-terminal](https://github.com/alexar76/pulse-terminal) | Agent Capital Exchange | capital-markets dashboard |
 | [signal-hunt](https://github.com/alexar76/signal-hunt) | Learn & explore | investigation game + lab |
 | [skopos](https://github.com/alexar76/skopos) | Observability | fleet nginx/Apache + Security Center |
 | [symmartys](https://github.com/alexar76/symmartys) | Real-world commerce | VAT, LEI, registers, FX, sanctions, timestamps, web capture & timers |
